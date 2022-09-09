@@ -17,6 +17,7 @@ int i;
 char *internal_command[] = {"env", "exit", NULL};
 char *path = NULL;
 for (i = 0; command[i] != '\0'; i++)
+{
 if (command[i] == '/')
 return (EXTERNAL_COMMAND);
 }

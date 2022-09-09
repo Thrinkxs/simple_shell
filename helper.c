@@ -16,11 +16,10 @@ char *save_ptr = NULL;
 token = _strtok_r(input_string, delim, &save_ptr);
 while (token != NULL)
 {
-av = _realloc(av, sizeof(*av) * num_delim, sizeof(*av) * (num_delim + 1)
-;
+av = _realloc(av, sizeof(*av) * num_delim, sizeof(*av) * (num_delim + 1));
 av[num_delim] = token;
 token = _strtok_r(NULL, delim, &save_ptr);
-num_delim++;
+ num_delim++;
 }
 av = _realloc(av, sizeof(*av) * num_delim, sizeof(*av) * (num_delim + 1));
 av[num_delim] = NULL;
